@@ -1,0 +1,7 @@
+<tbody>
+
+<% @links.each do |link| %>
+    <p><%= link.name  %>  </p>
+    <p><%= link.vote.count %></p>
+<% end %>
+</tbody>

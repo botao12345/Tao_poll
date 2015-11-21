@@ -1,0 +1,5 @@
+<tbody>
+<% @links.each do |link| %>
+    <p><%= link.name %><%= link_to "Vote", upvote_path(id: current_user.id, link_id:link.id) %> </p>
+<% end %>
+</tbody>
