@@ -1,7 +1,9 @@
-<tbody>
-
-<% @links.each do |link| %>
-    <p><%= link.name  %>  </p>
-    <p><%= link.vote.count %></p>
+<% if @links != nil %>
+    <% @links.each do |link| %>
+        <p><%= link.name %></p>
+        <p><%= link.vote.count %></p>
+    <% end %>
 <% end %>
-</tbody>
+
+<p><%= link_to "Set up vote", links_path %></p>
+<p><%= link_to "Reset", master_reset_path %></p>

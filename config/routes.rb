@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get 'upvote' =>  'voter#upvote'
 
-  get 'master/index'
+  get 'master' => 'master#index'
+
+  get 'master/reset'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

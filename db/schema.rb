@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118224327) do
+ActiveRecord::Schema.define(version: 20151121234206) do
+
+  create_table "admins", force: :cascade do |t|
+    t.integer  "option"
+    t.text     "who_voted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "controls", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "links", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +45,7 @@ ActiveRecord::Schema.define(version: 20151118224327) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
