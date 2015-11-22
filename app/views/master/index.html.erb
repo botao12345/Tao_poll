@@ -2,6 +2,12 @@
     <% @links.each do |link| %>
         <p><%= link.name %></p>
         <p><%= link.vote.count %></p>
+        <p><%= "voter:" %>
+          <% link.vote.each do |name| %>
+              <%= name %>
+          <% end %>
+        </p>
+
     <% end %>
 <% end %>
 
